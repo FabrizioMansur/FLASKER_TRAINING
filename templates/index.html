@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <h1>Hello World!!</h1>
+<p>This is my first webpage!</p>
+<p>isn't this cool!!!!</p>
+<p>my name is {{first_name|lower}} | lower</p>
+<p>my name is {{first_name|upper}} | upper</p>
+<p>my name is {{first_name}}</p>
+<p>{{stuff}}</p>
+<p>{{stuff|upper}} |upper</p>
+<p>{{stuff|upper|striptags}} | upper | striptags</p>
+<p>{{stuff|safe}} | safe</p>
+<p>{{stuff|striptags}} | striptags</p>
+<p>{{stuff2}}</p>
+<p>{{stuff2|capitalize}}</p>
+<p>{{favorite_pizza}}</p>
+
+<h3>Favorite Pizza (for loop)</h3>
+{% for topping in favorite_pizza %}
+    {{ topping}} <br>
+{%endfor%}
+<br>
+<br>
+{{ favorite_pizza.2 }}
+{{ favorite_pizza.1 }} <br>
+<p>e {{ favorite_pizza.0 }}</p>
+{{ favorite_pizza.3 }}<br>
+<p>aggiungo 10 al numero '41'e diventa {{ favorite_pizza.3 + 10}}</p>
+<br>
+<h3>Favorite Pizza (for loop with if statement)</h3>
+{% for topping in favorite_pizza %}
+    {% if topping == 41 %}
+        {{ topping + 100 }} <br>
+    {% else %}
+        {{ topping }} <br>
+    {% endif %}
+{%endfor%}
+
+<br>
+<br>
+<h3>reverse word</h3>
+{{ favorite_pizza.0|reverse }} = funghi invertito<br>
+
+</center>
+
+
+
+
+
+
+
+</body>
+</html>
